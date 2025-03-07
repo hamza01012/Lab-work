@@ -7,7 +7,7 @@ from machine import Pin, I2C, Timer
 from neopixel import NeoPixel
 #from machine import Pin, I2C, Timer
 import ssd1306
-
+  
 WIFI_SSID = 'your network/hotspot ssid'
 WIFI_PASS = 'your network/hotspot password'
 BLYNK_AUTH = "your blynk device authentication"

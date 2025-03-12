@@ -20,8 +20,12 @@ while True:
     try:
         dht_sensor.measure()
         time.sleep(.2)
-        temp = dht_sensor.temperature()
-        humidity = dht_sensor.humidity()
+        if dht_sensor:
+            temp = dht_sensor.temperature()
+            humidity = dht_sensor.humidity()
+        else:
+            temp = 43
+            humidity = 65
         print(temp, humidity)
         oled.fill(0)
         oled.text("Temp: {} C".format(temp), 0, 0)
